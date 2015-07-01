@@ -1,10 +1,12 @@
 class Barracks
   
-  attr_accessor :gold, :food
+  attr_accessor :gold, :food, :health_points
   
-  def initialize(gold = 1000, food = 80)
+  def initialize(gold = 1000, food = 80, health_points = 500)
     @gold = gold
-    @food = food
+    @food = food 
+    @health_points = health_points
+
   end
   
   def can_train_footman?
@@ -29,6 +31,10 @@ class Barracks
       @food -= food
     Peasant.new
     end
+  end
+
+  def damage(hp)
+    @health_points -= hp
   end
 
 end
