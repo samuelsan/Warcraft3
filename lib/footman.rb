@@ -4,10 +4,6 @@ class Footman < Unit
     # Also also give code outside this class access to these variables (via attr_reader, attr_writer or attr_accessor)
     super(60,10)
   end
-  
-  def damage(hp)
-    super
-  end
 
   def attack!(enemy)
     if enemy.is_a? Barracks
@@ -16,4 +12,5 @@ class Footman < Unit
       super(enemy)
     end
   end
+
 end

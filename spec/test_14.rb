@@ -7,19 +7,9 @@ describe Barracks do
 
   before :each do
     @barracks = Barracks.new
-    @footman = Footman.new
-  end
-  
-  it "has and knows its health points" do
-    expect(@barracks.health_points).to eq(500)
   end
 
-
-  describe "#damage" do
-    it "should deal 5 (AP) damage to the Barracks" do
-      @footman.attack!(@barracks)
-      expect(@barracks.health_points).to eq(495) #initial HP is 500
-    end
+  it "has and knows its amount of lumber" do
+    expect(@barracks.lumber).to eq(500)
   end
-
 end
